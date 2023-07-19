@@ -1,0 +1,50 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+  width: min(90%, 700px);
+  max-height: 50vh;
+  color: #302C42;
+
+  @media (max-width: 768px) {
+    z-index: 1;
+  }
+}
+
+.modalText {
+  padding: 20px;
+  background-color: #fff;
+  position: relative;
+
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.modalDescription {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}

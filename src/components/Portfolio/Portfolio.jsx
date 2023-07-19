@@ -1,7 +1,7 @@
 'use client'
 import styles from './Portfolio.module.scss'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,8 +11,178 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import PortfolioItem from '../PortfolioItem/PortfolioItem';
+import PortfolioModal from '../PortfolioModal/PortfolioModal';
+import { Introduction } from '../Introduction';
+
+import project11 from '../../assets/images/projects/project-1-1.jpg';
+import project12 from '../../assets/images/projects/project-1-2.jpg';
+import project13 from '../../assets/images/projects/project-1-3.jpg';
+import project14 from '../../assets/images/projects/project-1-4.jpg';
+import project15 from '../../assets/images/projects/project-1-5.jpg';
+import project16 from '../../assets/images/projects/project-1-6.jpg';
+import project21 from '../../assets/images/projects/project-2-1.jpg';
+import project22 from '../../assets/images/projects/project-2-2.jpg';
+import project23 from '../../assets/images/projects/project-2-3.jpg';
+import project24 from '../../assets/images/projects/project-2-4.jpg';
+import project25 from '../../assets/images/projects/project-2-5.jpg';
+import project26 from '../../assets/images/projects/project-2-6.jpg';
+import project31 from '../../assets/images/projects/project-3-1.jpg';
+import project32 from '../../assets/images/projects/project-3-2.jpg';
+import project33 from '../../assets/images/projects/project-3-3.jpg';
+import project34 from '../../assets/images/projects/project-3-4.jpg';
+import project35 from '../../assets/images/projects/project-3-5.jpg';
+import project36 from '../../assets/images/projects/project-3-6.jpg';
+import project37 from '../../assets/images/projects/project-3-7.jpg';
+import project38 from '../../assets/images/projects/project-3-8.jpg';
+import project41 from '../../assets/images/projects/project-4-1.jpg';
+import project42 from '../../assets/images/projects/project-4-2.jpg';
+import project43 from '../../assets/images/projects/project-4-3.jpg';
+import project44 from '../../assets/images/projects/project-4-4.jpg';
 
 export const Portfolio = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalData, setModalData] = useState({ title: '', description: '', slides: [] });
+
+  const handleOpenModal = (title, description, slides) => {
+    setIsModalOpen(true);
+    setModalData({ title, description, slides });
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const projectOneSlides = [
+    {
+      id: 1,
+      src: project11,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 2,
+      src: project12,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 3,
+      src: project13,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 4,
+      src: project14,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 5,
+      src: project15,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 6,
+      src: project16,
+      alt: 'Portfolio Slide',
+    },
+  ];
+  const projectTwoSlides = [
+    {
+      id: 7,
+      src: project21,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 8,
+      src: project22,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 9,
+      src: project23,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 10,
+      src: project24,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 11,
+      src: project25,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 12,
+      src: project26,
+      alt: 'Portfolio Slide',
+    },
+  ];
+  const projectThreeSlides = [
+    {
+      id: 13,
+      src: project31,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 14,
+      src: project32,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 15,
+      src: project33,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 16,
+      src: project34,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 17,
+      src: project35,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 18,
+      src: project36,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 19,
+      src: project37,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 20,
+      src: project38,
+      alt: 'Portfolio Slide',
+    },
+  ];
+  const projectFourSlides = [
+    {
+      id: 21,
+      src: project41,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 22,
+      src: project42,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 23,
+      src: project43,
+      alt: 'Portfolio Slide',
+    },
+    {
+      id: 24,
+      src: project44,
+      alt: 'Portfolio Slide',
+    },
+  ];
+
+
   return (
     <section className={styles.portfolio}>
       <svg className={styles.decor} xmlns="http://www.w3.org/2000/svg" width="1440" height="820" viewBox="0 0 1440 820" fill="none">
@@ -27,6 +197,11 @@ export const Portfolio = () => {
         </defs>
       </svg>
       <div className="container">
+        <Introduction
+          introductionTitle="Portfolio"
+          introductionSubtitle="My Work"
+          introductionDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, justo euismod."
+        />
         <div className={styles.heroSlider}>
           <Swiper
             // install Swiper modules
@@ -42,7 +217,7 @@ export const Portfolio = () => {
               768: {
                 slidesPerView: 3,
               },
-              925: {
+              992: {
                 slidesPerView: 4,
               },
             }}
@@ -55,30 +230,28 @@ export const Portfolio = () => {
               <PortfolioItem
                 portfolioTitle="Portfolio Title"
                 portfolioDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, justo euismod."
+                onOpenModal={() => handleOpenModal("Project 1", "Description for Project 1", projectOneSlides)}
               />
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
                 portfolioTitle="Portfolio Title"
                 portfolioDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, justo euismod."
+                onOpenModal={() => handleOpenModal("Project 2", "Description for Project 2", projectTwoSlides)}
               />
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
                 portfolioTitle="Portfolio Title"
                 portfolioDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, justo euismod."
+                onOpenModal={() => handleOpenModal("Project 3", "Description for Project 3", projectThreeSlides)}
               />
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
                 portfolioTitle="Portfolio Title"
                 portfolioDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, justo euismod."
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <PortfolioItem
-                portfolioTitle="Portfolio Title"
-                portfolioDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, justo euismod."
+                onOpenModal={() => handleOpenModal("Project 4", "Description for Project 4", projectFourSlides)}
               />
             </SwiperSlide>
 
@@ -95,6 +268,13 @@ export const Portfolio = () => {
           </Swiper>
         </div>
       </div>
+      <PortfolioModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        title={modalData.title}
+        description={modalData.description}
+        slides={modalData.slides}
+      />
     </section>
   )
 }

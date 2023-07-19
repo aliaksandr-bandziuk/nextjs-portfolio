@@ -49,6 +49,34 @@ img {
   z-index: 1;
 }
 
+.nextPortfolioBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #433d60;
+  box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  z-index: 1;
+}
+
+.prevPortfolioBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #433d60;
+  box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  z-index: 1;
+}
+
 @media screen and (min-width: 980px) {
   .buttonNext {
     display: none;

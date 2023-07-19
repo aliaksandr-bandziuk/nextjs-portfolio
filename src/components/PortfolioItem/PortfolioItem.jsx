@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import styles from './PortfolioItem.module.scss';
+import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 
-import styles from './PortfolioItem.module.scss'
-import ButtonPrimary from '../ButtonPrimary/ButtonPrimary'
-
-const PortfolioItem = ({ portfolioTitle, portfolioDescription }) => {
+const PortfolioItem = ({ portfolioTitle, portfolioDescription, onOpenModal }) => {
   return (
     <div className={styles.portfolioItem}>
       <div className={styles.portfolioItemWpapper}>
@@ -13,11 +12,11 @@ const PortfolioItem = ({ portfolioTitle, portfolioDescription }) => {
         <div className={styles.portfolioItemContent}>
           <h3 className={styles.title}>{portfolioTitle}</h3>
           <p className={styles.text}>{portfolioDescription}</p>
-          <ButtonPrimary title="View Project" />
+          <ButtonPrimary title="View Project" onClick={onOpenModal} />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PortfolioItem
+export default PortfolioItem;
