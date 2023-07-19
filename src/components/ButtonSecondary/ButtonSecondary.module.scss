@@ -1,0 +1,22 @@
+.button {
+  width: 154px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 2px solid #FFF;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #ed3760;
+    color: #fff;
+    border: 2px solid #ed3760;
+  }
+
+    @media (max-width: 920px) {
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
+  }
+}

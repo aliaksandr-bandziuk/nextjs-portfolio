@@ -1,0 +1,46 @@
+.heroSlider {
+  margin-top: clamp(3.125rem, 1.989rem + 5.68vw, 6.25rem);
+  border-radius: 90px;
+  background: radial-gradient(2900.76% 50.13% at 50.00% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+  box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+}
+
+.heroSliderItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0 30px 0;
+  height: 100%;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 25px 0 25px 0;
+  }
+}
+
+.slideIcon {
+  margin-right: 10px;
+}
+.slideText {
+  text-align: left;
+}
+.slideTitle {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  @media screen and (max-width: 768px) {
+   display: none; 
+  }
+    
+}
+
+.slideDescription {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

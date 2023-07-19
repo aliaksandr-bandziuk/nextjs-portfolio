@@ -1,0 +1,111 @@
+.hero {
+  padding: 40px 0;
+  position: relative;
+  margin-top: 80px;
+  margin-bottom: clamp(1.875rem, 1.08rem + 3.98vw, 4.063rem);
+
+  @media screen and (max-width: 768px) {
+    padding-top: 10px;
+  }
+}
+
+.decorationLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.heroWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+}
+
+.heroText {
+  flex: 1;
+  max-width: 500px;
+}
+
+.heroTitle {
+  font-size: clamp(1.5rem, 1rem + 2.5vw, 2.875rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+.heroSubtitle {
+  font-size: clamp(2.25rem, 2.023rem + 1.14vw, 2.875rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(156deg, #C0B7E8 0%, #8176AF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 35px;
+}
+
+.heroDescription {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 60px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.heroButton {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  button {
+    @media screen and (max-width: 768px) {
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+
+  svg {
+    transition: all 0.2s ease-in-out;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    svg {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.heroImage {
+  position: relative;
+  z-index: -1;
+  animation: animate 2s infinite alternate;
+}
+
+@keyframes animate {
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+.image {
+  width: 450px;
+  height: auto;
+  object-fit: contain;
+}

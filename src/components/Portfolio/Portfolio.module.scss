@@ -1,0 +1,11 @@
+.portfolio {
+  position: relative;
+}
+
+.decor {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  z-index: -1;
+  width: 100%; /* Делаем ширину svg 100% от родительского контейнера */
+}

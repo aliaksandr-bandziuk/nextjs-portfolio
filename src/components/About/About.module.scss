@@ -1,0 +1,81 @@
+.about {
+  margin-bottom: clamp(3.125rem, 2.443rem + 3.41vw, 5rem);
+  position: relative;
+}
+
+.decor1 {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  z-index: -1;
+  width: 100%; /* Делаем ширину svg 100% от родительского контейнера */
+}
+
+.decor2 {
+  position: absolute;
+  left: 0;
+  top: 60%;
+  z-index: -1;
+  width: 100%; /* Делаем ширину svg 100% от родительского контейнера */
+}
+
+.aboutWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.aboutImage {
+  flex: 1;
+  border-radius: 240px 100px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.img {
+  border-radius: 240px 100px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.aboutContent {
+  flex: 1;
+
+  button {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+.aboutTitle {
+  color: #FFF;
+  font-size: clamp(1.625rem, 1.398rem + 1.14vw, 2.25rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.aboutDescription {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 28px;
+}
