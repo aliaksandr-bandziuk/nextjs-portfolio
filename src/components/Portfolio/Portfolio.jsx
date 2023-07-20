@@ -199,8 +199,8 @@ export const Portfolio = () => {
       <div className="container">
         <Introduction
           introductionTitle="Portfolio"
-          introductionSubtitle="My Work"
-          introductionDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, justo euismod."
+          introductionSubtitle="What I can do for you"
+          introductionDescription="A can create for you a modern and responsive website, which will be easy to use and will look great on any device, from mobile to desktop. It will be fast, secure and SEO friendly. If you need a Landing Page, Blog, Business Website or an Online Store, I can help you with that."
         />
         <div className={styles.heroSlider}>
           <Swiper
