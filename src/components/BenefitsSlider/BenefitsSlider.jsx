@@ -45,12 +45,12 @@ export const BenefitsSlider = () => {
         </SwiperSlide>
         <button className="prevBenefitsBtn">
           <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-            <path d="M22.1666 26.9167L14.25 19.0001L22.1666 11.0834" stroke="#433D60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M22.1666 26.9167L14.25 19.0001L22.1666 11.0834" stroke="#433D60" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
         <button className="nextBenefitsBtn">
           <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
-            <path d="M15.8334 26.9167L23.75 19.0001L15.8334 11.0834" stroke="#433D60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15.8334 26.9167L23.75 19.0001L15.8334 11.0834" stroke="#433D60" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       </Swiper>
