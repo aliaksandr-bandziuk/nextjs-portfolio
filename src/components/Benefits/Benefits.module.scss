@@ -1,0 +1,12 @@
+.benefits {
+  position: relative;
+  margin-bottom: clamp(3.438rem, 2.642rem + 3.98vw, 5.625rem);
+}
+
+.decor {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  z-index: -1;
+  width: 100%; /* Делаем ширину svg 100% от родительского контейнера */
+}

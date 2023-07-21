@@ -1,0 +1,46 @@
+.benefit {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.numberBorder {
+  border-radius: 50%;
+  border: 5px solid #42445A;
+}
+
+.benefitNumber {
+  background: linear-gradient(251deg, #C0B7E8 0%, #8176AF 100%);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #343045;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.benefitTitle {
+  text-align: center;
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+
+  &::before {
+    content: url('/assets/images/arrow-small-right.png');
+    position: absolute;
+    top: -20px;
+    left: -70px;
+  }
+}
