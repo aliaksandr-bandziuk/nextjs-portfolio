@@ -13,24 +13,24 @@ const TheFooter = () => {
   return (
     <footer className={styles.footer}>
       <svg className={styles.decor1} xmlns="http://www.w3.org/2000/svg" width="1439" height="368" viewBox="0 0 1439 368" fill="none">
-        <path d="M3.5 366C45.3333 297.5 213.9 191.2 553.5 314C893.1 436.8 1285 157.833 1438.5 3" stroke="url(#paint0_linear_13_66)" stroke-opacity="0.13" stroke-width="6" />
+        <path d="M3.5 366C45.3333 297.5 213.9 191.2 553.5 314C893.1 436.8 1285 157.833 1438.5 3" stroke="url(#paint0_linear_13_66)" strokeOpacity="0.13" strokeWidth="6" />
         <defs>
           <linearGradient id="paint0_linear_13_66" x1="1438.5" y1="3.86474" x2="3.5" y2="3.86467" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#343045" />
-            <stop offset="0.348958" stop-color="#C0B7E8" />
-            <stop offset="0.6875" stop-color="#8176AF" />
-            <stop offset="1" stop-color="#343045" />
+            <stop stopColor="#343045" />
+            <stop offset="0.348958" stopColor="#C0B7E8" />
+            <stop offset="0.6875" stopColor="#8176AF" />
+            <stop offset="1" stopColor="#343045" />
           </linearGradient>
         </defs>
       </svg>
       <svg className={styles.decor2} xmlns="http://www.w3.org/2000/svg" width="1440" height="270" viewBox="0 0 1440 270" fill="none">
-        <path d="M1439.5 3C1315.17 14.3333 1084.71 109.757 957 215C795 348.5 543.167 194 391 97C283.5 30 55.3 -36.3 2.5 234.5" stroke="url(#paint0_linear_13_65)" stroke-opacity="0.13" stroke-width="6" />
+        <path d="M1439.5 3C1315.17 14.3333 1084.71 109.757 957 215C795 348.5 543.167 194 391 97C283.5 30 55.3 -36.3 2.5 234.5" stroke="url(#paint0_linear_13_65)" strokeOpacity="0.13" strokeWidth="6" />
         <defs>
           <linearGradient id="paint0_linear_13_65" x1="1439.5" y1="3.63123" x2="2.5" y2="3.63112" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#343045" />
-            <stop offset="0.348958" stop-color="#C0B7E8" />
-            <stop offset="0.6875" stop-color="#8176AF" />
-            <stop offset="1" stop-color="#343045" />
+            <stop stopColor="#343045" />
+            <stop offset="0.348958" stopColor="#C0B7E8" />
+            <stop offset="0.6875" stopColor="#8176AF" />
+            <stop offset="1" stopColor="#343045" />
           </linearGradient>
         </defs>
       </svg>
@@ -83,7 +83,7 @@ const TheFooter = () => {
               </Link>
               <Link className={styles.footerSocialItem} href="https://www.linkedin.com/in/bandziuk/" target='_blank'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16ZM8.2 13.3V24H11.6V13.3H8.2ZM8 9.9C8 11 8.8 11.8 9.9 11.8C11 11.8 11.8 11 11.8 9.9C11.8 8.8 11 8 9.9 8C8.9 8 8 8.8 8 9.9ZM20.6 24H23.8V17.4C23.8 14.1 21.8 13 19.9 13C18.2 13 17 14.1 16.7 14.8V13.3H13.5V24H16.9V18.3C16.9 16.8 17.9 16 18.9 16C19.9 16 20.6 16.5 20.6 18.2V24Z" fill="#C0B7E8" />
+                  <path fillRule="evenodd" clipRule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16ZM8.2 13.3V24H11.6V13.3H8.2ZM8 9.9C8 11 8.8 11.8 9.9 11.8C11 11.8 11.8 11 11.8 9.9C11.8 8.8 11 8 9.9 8C8.9 8 8 8.8 8 9.9ZM20.6 24H23.8V17.4C23.8 14.1 21.8 13 19.9 13C18.2 13 17 14.1 16.7 14.8V13.3H13.5V24H16.9V18.3C16.9 16.8 17.9 16 18.9 16C19.9 16 20.6 16.5 20.6 18.2V24Z" fill="#C0B7E8" />
                 </svg>
               </Link>
             </div>
