@@ -12,7 +12,7 @@ import { HeroSlider } from '../HeroSlider';
 
 export const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="home">
       <svg className={styles.decorationLine} xmlns="http://www.w3.org/2000/svg" width="243" height="565" viewBox="0 0 243 565" fill="none">
         <path d="M1.5 3C104.5 41.1667 293.4 206.8 225 564" stroke="url(#paint0_linear_2_34)" strokeOpacity="0.06" strokeWidth="6" />
         <defs>

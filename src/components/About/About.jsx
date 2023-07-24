@@ -7,7 +7,7 @@ import ButtonPrimary from '../ButtonPrimary/ButtonPrimary'
 
 export const About = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <svg className={styles.decor1} xmlns="http://www.w3.org/2000/svg" width="1440" height="262" viewBox="0 0 1440 262" fill="none">
         <path d="M1442.5 215C1387.5 104.333 1242.8 -83.7999 1104 49.0001C930.5 215 761.5 331.5 554.5 203.5C347.5 75.5001 34.5 175.5 -6.5 260" stroke="url(#paint0_linear_3_53)" strokeOpacity="0.13" strokeWidth="6" />
         <defs>

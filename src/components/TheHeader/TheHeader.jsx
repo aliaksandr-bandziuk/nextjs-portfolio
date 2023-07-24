@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { gsap } from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 import Logo from '../../assets/images/logo.png'
 import ButtonSecondary from '../ButtonSecondary/ButtonSecondary'
@@ -11,6 +14,7 @@ import styles from './TheHeader.module.scss'
 
 const TheHeader = () => {
   const [isNavVisible, setNavVisible] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   const closeMenu = () => {
     setNavVisible(false);
@@ -24,8 +28,35 @@ const TheHeader = () => {
     }
   }, [isNavVisible]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    ScrollTrigger.create({
+      start: 'top -70',
+      end: 99999,
+      toggleClass: {
+        className: styles.headerScrolled,
+        targets: `.${styles.header}`
+      }
+    });
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${hasScrolled ? styles.headerScrolled : ''}`}>
       <div className="container">
         <div className={styles.headerWpapper}>
           <div className={styles.headerLogo}>
@@ -43,17 +74,19 @@ const TheHeader = () => {
           <div className={`${styles.headerMenu} ${isNavVisible ? styles.navVisible : ''}`} onClick={closeMenu}>
             <nav className={styles.nav}>
               <div className={styles.navList}>
-                <Link href="#" className={styles.navListItem}>Home</Link>
-                <Link href="#" className={styles.navListItem}>About</Link>
-                <Link href="#" className={styles.navListItem}>Development</Link>
-                <Link href="#" className={styles.navListItem}>Portfolio</Link>
+                <Link href="#home" className={styles.navListItem}>Home</Link>
+                <Link href="#about" className={styles.navListItem}>About</Link>
+                <Link href="#development" className={styles.navListItem}>Development</Link>
+                <Link href="#portfolio" className={styles.navListItem}>Portfolio</Link>
               </div>
             </nav>
             <div className={styles.headerButtons}>
-              <ButtonSecondary
-                title="Contact me"
-                onClick={closeMenu}
-              />
+              <Link href="#contact">
+                <ButtonSecondary
+                  title="Contact me"
+                  onClick={closeMenu}
+                />
+              </Link>
               <ButtonPrimary title="Hire now" />
             </div>
           </div>

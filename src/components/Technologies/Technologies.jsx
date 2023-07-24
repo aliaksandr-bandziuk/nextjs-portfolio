@@ -10,7 +10,7 @@ import JavaScriptLogo from '../../assets/images/logo-js.png';
 
 export const Technologies = () => {
   return (
-    <section className={styles.technologies}>
+    <section className={styles.technologies} id="development">
       <div className="container">
         <div className={styles.technologiesInner}>
           <h2 className={styles.technologiesTitle}>Technologies</h2>

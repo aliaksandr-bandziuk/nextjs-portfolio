@@ -1,11 +1,30 @@
 .header {
-  padding: 40px 0;
+  padding: 15px 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   z-index: 100;
+  background-color: transparent;
+  transition: all ease-in-out .2s;
+
+  @media (max-width: 768px) {
+    padding: 35px 0;
+  }
+}
+
+/* Add the styles for the header when scrolled */
+.headerScrolled {
+  background-color: #302C42;
+  
+  @media (min-width: 768px) {
+    padding: 5px 0;
+  }
+}
+
+.buttonSecondaryScrolled {
+  height: 10px;
 }
 
 .headerWpapper {
@@ -61,6 +80,10 @@
   letter-spacing: 0.1rem;
   transition: all 0.2s ease-in-out;
 
+  &.active {
+    color: #ed3760; /* или другой стиль, который вы хотите применить к активному пункту */
+  }
+
   &:hover {
     color: #ed3760;
   }
@@ -96,7 +119,7 @@
 
   .headerLogo {
     position: absolute;
-    top: 30px;
+    top: 13px;
     left: 30px;
   }
 
@@ -136,7 +159,7 @@
     align-self: center;
     color: white;
     position: absolute;
-    top: 40px;
+    top: 20px;
     right: 30px;
     transition: all 0.2s ease-in-out;
   }
