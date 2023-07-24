@@ -9,6 +9,7 @@ import styles from './Hero.module.scss';
 import HeroImage from '../../assets/images/hero.png';
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 import { HeroSlider } from '../HeroSlider';
+import Link from 'next/link';
 
 export const Hero = () => {
   return (
@@ -33,7 +34,9 @@ export const Hero = () => {
               I create websites and applications for your business and entertainment. Use modern technologies to make the resource fast and adapted to any device.
             </p>
             <div className={styles.heroButton}>
-              <ButtonPrimary className={styles.button} title="Learn more" />
+              <Link href="#about">
+                <ButtonPrimary className={styles.button} title="Learn more" />
+              </Link>
               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
                 <path d="M70.8333 50L29.1667 50M70.8333 50L54.1667 66.6667M70.8333 50L54.1667 33.3333" stroke="#C0B7E8" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

@@ -21,6 +21,10 @@ img {
   padding: 0 10px; 
 }
 
+.active {
+  color: #ed3760;
+}
+
 .buttonPrev {
   position: absolute;
   top: 50%;

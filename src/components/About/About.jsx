@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import AboutImage from '../../assets/images/about.jpg'
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary'
+import Link from 'next/link'
 
 export const About = () => {
   return (
@@ -52,7 +53,9 @@ export const About = () => {
               retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi
               n tempor.
             </p>
-            <ButtonPrimary title="Download CV" />
+            <Link href="/assets/docs/cv-aliaksandr-bandziuk.pdf" target='_blank'>
+              <ButtonPrimary title="Download CV" />
+            </Link>
           </div>
         </div>
       </div>

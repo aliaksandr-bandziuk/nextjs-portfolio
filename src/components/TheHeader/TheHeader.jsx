@@ -15,6 +15,7 @@ import styles from './TheHeader.module.scss'
 const TheHeader = () => {
   const [isNavVisible, setNavVisible] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [activeNavItem, setActiveNavItem] = useState('');
 
   const closeMenu = () => {
     setNavVisible(false);
@@ -35,6 +36,23 @@ const TheHeader = () => {
       } else {
         setHasScrolled(false);
       }
+
+      // Get all the sections and their corresponding links
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll(`.${styles.navListItem}`);
+
+      // Find the section that is currently in the viewport
+      let activeSection = '';
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 200 && window.scrollY < sectionTop + sectionHeight - 200) {
+          activeSection = section.getAttribute('id');
+        }
+      });
+
+      // Update the active navigation item
+      setActiveNavItem(activeSection);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -74,10 +92,11 @@ const TheHeader = () => {
           <div className={`${styles.headerMenu} ${isNavVisible ? styles.navVisible : ''}`} onClick={closeMenu}>
             <nav className={styles.nav}>
               <div className={styles.navList}>
-                <Link href="#home" className={styles.navListItem}>Home</Link>
-                <Link href="#about" className={styles.navListItem}>About</Link>
-                <Link href="#development" className={styles.navListItem}>Development</Link>
-                <Link href="#portfolio" className={styles.navListItem}>Portfolio</Link>
+                {/* Add the active class based on activeNavItem */}
+                <Link href="#home" className={`${styles.navListItem} ${activeNavItem === 'home' ? 'active' : ''}`}>Home</Link>
+                <Link href="#about" className={`${styles.navListItem} ${activeNavItem === 'about' ? 'active' : ''}`}>About</Link>
+                <Link href="#development" className={`${styles.navListItem} ${activeNavItem === 'development' ? 'active' : ''}`}>Development</Link>
+                <Link href="#portfolio" className={`${styles.navListItem} ${activeNavItem === 'portfolio' ? 'active' : ''}`}>Portfolio</Link>
               </div>
             </nav>
             <div className={styles.headerButtons}>

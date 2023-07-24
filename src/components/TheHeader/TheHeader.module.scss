@@ -80,13 +80,16 @@
   letter-spacing: 0.1rem;
   transition: all 0.2s ease-in-out;
 
-  &.active {
-    color: #ed3760; /* или другой стиль, который вы хотите применить к активному пункту */
-  }
-
   &:hover {
     color: #ed3760;
   }
+
+  /* Одно определение для активного элемента */
+  &.active {
+    color: #ed3760;
+    font-size: 50px;
+  }
+  /* или другой стиль, который вы хотите применить к активному пункту */
 
   @media (max-width: 768px) {
     &:hover {
@@ -102,10 +105,6 @@
     flex-direction: column;
     gap: 20px;
   }
-}
-
-.active {
-  color: #ed3760;
 }
 
 .burgerMenu {
