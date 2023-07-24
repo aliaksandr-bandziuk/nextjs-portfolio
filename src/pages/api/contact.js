@@ -15,9 +15,6 @@ export default async function handler(req, res) {
           user: 'bandziuk.aliaksandr@gmail.com', // Ваш адрес электронной почты Gmail
           pass: 'jwjmuuabjwmsheca', // Ваш пароль приложения Gmail
         },
-        tls: {
-          rejectUnauthorized: false, // Отключаем проверку SSL-сертификата (только для тестирования на локальной машине)
-        },
       });
 
       // Опции для отправки письма

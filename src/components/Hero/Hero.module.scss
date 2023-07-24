@@ -1,7 +1,7 @@
 .hero {
   padding: 40px 0;
   position: relative;
-  margin-top: 80px;
+  margin-top: clamp(5rem, 3.864rem + 5.68vw, 8.125rem);
   margin-bottom: clamp(1.875rem, 1.08rem + 3.98vw, 4.063rem);
 
   @media screen and (max-width: 768px) {
