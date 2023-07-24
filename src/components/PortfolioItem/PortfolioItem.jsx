@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from './PortfolioItem.module.scss';
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
+import Image from 'next/image';
+
+import Logo from '../../assets/images/logo.png';
 
 const PortfolioItem = ({ portfolioTitle, portfolioDescription, onOpenModal }) => {
   return (
     <div className={styles.portfolioItem}>
       <div className={styles.portfolioItemWpapper}>
         <div className={styles.portfolioItemImg}>
-          <img className={styles.img} src="https://via.placeholder.com/300x300" alt="" />
+          <Image src={Logo} alt="" />
         </div>
         <div className={styles.portfolioItemContent}>
           <h3 className={styles.title}>{portfolioTitle}</h3>

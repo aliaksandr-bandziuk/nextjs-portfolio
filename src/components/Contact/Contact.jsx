@@ -1,6 +1,6 @@
-import { ContactForm } from '../ContactForm'
-import styles from './Contact.module.scss'
-import React from 'react'
+import { ContactForm } from '../ContactForm';
+import styles from './Contact.module.scss';
+import React from 'react';
 
 export const Contact = () => {
   return (
@@ -24,12 +24,12 @@ export const Contact = () => {
                   </defs>
                 </svg>
               </div>
-              <h3 className={styles.contactSubtitle}>Let's create the cool project for you</h3>
+              <h3 className={styles.contactSubtitle}>Let&apos;s create the cool project for you</h3>
             </div>
             <ContactForm />
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
