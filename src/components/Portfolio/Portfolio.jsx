@@ -17,8 +17,6 @@ import { Introduction } from '../Introduction';
 import project11 from '../../assets/images/projects/project-1-1.jpg';
 import project12 from '../../assets/images/projects/project-1-2.jpg';
 import project13 from '../../assets/images/projects/project-1-3.jpg';
-import project14 from '../../assets/images/projects/project-1-4.jpg';
-import project15 from '../../assets/images/projects/project-1-5.jpg';
 import project16 from '../../assets/images/projects/project-1-6.jpg';
 import project21 from '../../assets/images/projects/project-2-1.jpg';
 import project22 from '../../assets/images/projects/project-2-2.jpg';
@@ -67,16 +65,6 @@ export const Portfolio = () => {
     {
       id: 3,
       src: project13,
-      alt: 'Portfolio Slide',
-    },
-    {
-      id: 4,
-      src: project14,
-      alt: 'Portfolio Slide',
-    },
-    {
-      id: 5,
-      src: project15,
       alt: 'Portfolio Slide',
     },
     {
@@ -228,29 +216,29 @@ export const Portfolio = () => {
           >
             <SwiperSlide>
               <PortfolioItem
-                portfolioTitle="Portfolio Title"
-                portfolioDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, justo euismod."
+                portfolioTitle="Dental project website"
+                portfolioDescription="The Landing Page for a dental clinic. It has a modern design and is fully responsive."
                 onOpenModal={() => handleOpenModal("Project 1", "Description for Project 1", projectOneSlides)}
               />
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
-                portfolioTitle="Portfolio Title"
-                portfolioDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, justo euismod."
+                portfolioTitle="Foundation blog"
+                portfolioDescription="The Blog for a social foundation. Created with WordPress. Used custom theme and plugins."
                 onOpenModal={() => handleOpenModal("Project 2", "Description for Project 2", projectTwoSlides)}
               />
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
-                portfolioTitle="Portfolio Title"
-                portfolioDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, justo euismod."
+                portfolioTitle="NGO Recource Center"
+                portfolioDescription="The Website for a NGO. Created with Next.js and WordPress as headless CMS."
                 onOpenModal={() => handleOpenModal("Project 3", "Description for Project 3", projectThreeSlides)}
               />
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
-                portfolioTitle="Portfolio Title"
-                portfolioDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, justo euismod."
+                portfolioTitle="Inclusive travel project"
+                portfolioDescription="The website for a travel agency. Source for a disabled people friendly."
                 onOpenModal={() => handleOpenModal("Project 4", "Description for Project 4", projectFourSlides)}
               />
             </SwiperSlide>
