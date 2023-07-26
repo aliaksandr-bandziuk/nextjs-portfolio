@@ -55,7 +55,7 @@ const TheFooter = () => {
               <Link href="/assets/docs/cv-aliaksandr-bandziuk.pdf" target="_blank">
                 <ButtonSecondary title="Download CV" />
               </Link>
-              <ButtonPrimary title="Hire me" />
+              {/* <ButtonPrimary title="Hire me" /> */}
             </div>
           </div>
           <div className={styles.footerItem}>

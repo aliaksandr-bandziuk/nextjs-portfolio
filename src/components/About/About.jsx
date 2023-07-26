@@ -43,15 +43,16 @@ export const About = () => {
           <div className={styles.aboutContent}>
             <h2 className={styles.aboutTitle}>About me</h2>
             <p className={styles.aboutDescription}>
-              Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus
-              urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida
-              dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in.
-              Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet
-              sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam
-              etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet
-              cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pha
-              retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi
-              n tempor.
+              I'm Alex, frontend software engineer and freelance web developer. I specialize in crafting captivating Landing Pages, Blogs, and Online stores that take businesses to soaring heights. I'm also expert in digital marketing and SEO.
+            </p>
+            <p className={styles.aboutDescription}>
+              What's the secret to my standout work? I'm all about cutting-edge coding and development standards, guaranteeing modern designs and top-notch performance.
+            </p>
+            <p className={styles.aboutDescription}>
+              Why do clients rave about me? Firstly, my lightning-fast responsiveness to your feedback and requests, ensuring a smooth and delightful collaboration. Secondly, I've got you covered with a comprehensive range of services, from prototypes to full-fledged applications, performance optimization, hosting, and ongoing maintenance.
+            </p>
+            <p className={styles.aboutDescription}>
+              Looking for a high-quality website? Look no further! Let's team up and create a digital masterpiece that leaves an indelible impression on your audience and elevates your online presence. Your success is my top priority! Reach out to me now.
             </p>
             <Link href="/assets/docs/cv-aliaksandr-bandziuk.pdf" target='_blank'>
               <ButtonPrimary title="Download CV" />

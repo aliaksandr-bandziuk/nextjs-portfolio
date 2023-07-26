@@ -2,6 +2,7 @@ import './globals.css'
 import { Montserrat } from 'next/font/google'
 import TheHeader from '@/components/TheHeader/TheHeader'
 import TheFooter from '@/components/TheFooter/TheFooter'
+import { CookieConsent } from '@/components/CookieConsent'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <TheHeader />
         {children}
         <TheFooter />
+        <CookieConsent />
       </body>
     </html>
   )
