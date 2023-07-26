@@ -10,7 +10,7 @@ import Script from 'next/script'
 export default function Home() {
   return (
     <>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-FYN41J3DJK" />
+      <Script id='ga' src="https://www.googletagmanager.com/gtag/js?id=G-FYN41J3DJK" />
       <Script>
         {`
           window.dataLayer = window.dataLayer || [];
