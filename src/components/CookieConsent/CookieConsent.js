@@ -1,13 +1,18 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
+import styles from './CookieConsent.module.scss';
 
-import styles from './CookieConsent.module.scss'
+const CookieConsent = () => {
+  const [showBanner, setShowBanner] = useState(false);
 
-export const CookieConsent = () => {
-  const [showBanner, setShowBanner] = useState(true);
+  useEffect(() => {
+    // Проверяем, было ли согласие на использование куки принято
+    const isConsentAccepted = localStorage.getItem('cookieConsentAccepted') === 'true';
+    setShowBanner(!isConsentAccepted);
+  }, []);
 
   const handleAccept = () => {
-    // При клике на "Принять", сохраните состояние в localStorage или cookie,
+    // При клике на "Принять", сохраняем состояние в localStorage,
     // чтобы сообщение больше не отображалось после обновления страницы
     localStorage.setItem('cookieConsentAccepted', 'true');
     setShowBanner(false);
@@ -20,10 +25,7 @@ export const CookieConsent = () => {
     setShowBanner(false);
   };
 
-  // Проверка, было ли согласие на использование куки принято
-  const isConsentAccepted = localStorage.getItem('cookieConsentAccepted') === 'true';
-
-  if (!showBanner || isConsentAccepted) {
+  if (!showBanner) {
     return null;
   }
 
@@ -34,4 +36,6 @@ export const CookieConsent = () => {
       <button onClick={handleDecline}>Decline</button>
     </div>
   );
-}
+};
+
+export default CookieConsent;

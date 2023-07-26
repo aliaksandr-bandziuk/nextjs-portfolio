@@ -1,4 +1,3 @@
-// pages/api/setCookie.js
 import cookie from 'js-cookie';
 
 export default function handler(req, res) {
