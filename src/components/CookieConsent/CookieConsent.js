@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './CookieConsent.module.scss';
 
-const CookieConsent = () => {
+export const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
@@ -37,5 +37,3 @@ const CookieConsent = () => {
     </div>
   );
 };
-
-export default CookieConsent;
