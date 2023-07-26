@@ -15,7 +15,7 @@ export default function Home() {
       <Portfolio />
       <Benefits />
       <Contact />
-      <CookieConsent />
+      {/* <CookieConsent /> */}
     </main>
   )
 }
