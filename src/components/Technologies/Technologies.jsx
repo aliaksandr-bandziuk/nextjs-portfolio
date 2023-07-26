@@ -7,6 +7,8 @@ import NextLogo from '../../assets/images/logo-next.png';
 import WpLogo from '../../assets/images/logo-wp.png';
 import TypeScriptLogo from '../../assets/images/logo-ts.png';
 import JavaScriptLogo from '../../assets/images/logo-js.png';
+import ReduxLogo from '../../assets/images/logo-redux.png';
+import MuiLogo from '../../assets/images/logo-mui.png';
 
 export const Technologies = () => {
   return (
@@ -33,7 +35,7 @@ export const Technologies = () => {
           <div className={styles.technologieslogosItem}>
             <Image
               src={NextLogo}
-              alt="React"
+              alt="Next.js"
               width={120}
               height={120}
             />
@@ -41,7 +43,7 @@ export const Technologies = () => {
           <div className={styles.technologieslogosItem}>
             <Image
               src={WpLogo}
-              alt="React"
+              alt="WordPress"
               width={120}
               height={120}
             />
@@ -49,7 +51,23 @@ export const Technologies = () => {
           <div className={styles.technologieslogosItem}>
             <Image
               src={TypeScriptLogo}
-              alt="React"
+              alt="TypeScript"
+              width={120}
+              height={120}
+            />
+          </div>
+          <div className={styles.technologieslogosItem}>
+            <Image
+              src={ReduxLogo}
+              alt="Redux"
+              width={120}
+              height={120}
+            />
+          </div>
+          <div className={styles.technologieslogosItem}>
+            <Image
+              src={MuiLogo}
+              alt="Material UI"
               width={120}
               height={120}
             />

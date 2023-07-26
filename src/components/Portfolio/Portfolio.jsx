@@ -28,14 +28,12 @@ import project31 from '../../assets/images/projects/project-3-1.jpg';
 import project32 from '../../assets/images/projects/project-3-2.jpg';
 import project33 from '../../assets/images/projects/project-3-3.jpg';
 import project34 from '../../assets/images/projects/project-3-4.jpg';
-import project35 from '../../assets/images/projects/project-3-5.jpg';
-import project36 from '../../assets/images/projects/project-3-6.jpg';
-import project37 from '../../assets/images/projects/project-3-7.jpg';
-import project38 from '../../assets/images/projects/project-3-8.jpg';
 import project41 from '../../assets/images/projects/project-4-1.jpg';
 import project42 from '../../assets/images/projects/project-4-2.jpg';
-import project43 from '../../assets/images/projects/project-4-3.jpg';
-import project44 from '../../assets/images/projects/project-4-4.jpg';
+import project1 from '../../assets/images/projects/project1.png';
+import project2 from '../../assets/images/projects/project2.png';
+import project3 from '../../assets/images/projects/project3.png';
+import project4 from '../../assets/images/projects/project4.png';
 
 export const Portfolio = () => {
 
@@ -126,26 +124,6 @@ export const Portfolio = () => {
       src: project34,
       alt: 'Portfolio Slide',
     },
-    {
-      id: 17,
-      src: project35,
-      alt: 'Portfolio Slide',
-    },
-    {
-      id: 18,
-      src: project36,
-      alt: 'Portfolio Slide',
-    },
-    {
-      id: 19,
-      src: project37,
-      alt: 'Portfolio Slide',
-    },
-    {
-      id: 20,
-      src: project38,
-      alt: 'Portfolio Slide',
-    },
   ];
   const projectFourSlides = [
     {
@@ -156,16 +134,6 @@ export const Portfolio = () => {
     {
       id: 22,
       src: project42,
-      alt: 'Portfolio Slide',
-    },
-    {
-      id: 23,
-      src: project43,
-      alt: 'Portfolio Slide',
-    },
-    {
-      id: 24,
-      src: project44,
       alt: 'Portfolio Slide',
     },
   ];
@@ -216,30 +184,34 @@ export const Portfolio = () => {
           >
             <SwiperSlide>
               <PortfolioItem
-                portfolioTitle="Dental project website"
-                portfolioDescription="The Landing Page for a dental clinic. It has a modern design and is fully responsive."
-                onOpenModal={() => handleOpenModal("Project 1", "Description for Project 1", projectOneSlides)}
+                portfolioImage={project1}
+                portfolioTitle="Business"
+                portfolioDescription=""
+                onOpenModal={() => handleOpenModal("Dental project website", "The Landing Page for a dental clinic. It has a modern design and is fully responsive.", projectOneSlides)}
               />
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
-                portfolioTitle="Foundation blog"
-                portfolioDescription="The Blog for a social foundation. Created with WordPress. Used custom theme and plugins."
-                onOpenModal={() => handleOpenModal("Project 2", "Description for Project 2", projectTwoSlides)}
+                portfolioImage={project2}
+                portfolioTitle="Social"
+                portfolioDescription=""
+                onOpenModal={() => handleOpenModal("Foundation blog", "The Blog for a social foundation. Created with WordPress. Used custom theme and plugins.", projectTwoSlides)}
               />
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
-                portfolioTitle="NGO Recource Center"
-                portfolioDescription="The Website for a NGO. Created with Next.js and WordPress as headless CMS."
-                onOpenModal={() => handleOpenModal("Project 3", "Description for Project 3", projectThreeSlides)}
+                portfolioImage={project3}
+                portfolioTitle="NGO"
+                portfolioDescription=""
+                onOpenModal={() => handleOpenModal("NGO Recource Center", "The Website for a NGO. Created with Next.js and WordPress as headless CMS.", projectThreeSlides)}
               />
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
-                portfolioTitle="Inclusive travel project"
-                portfolioDescription="The website for a travel agency. Source for a disabled people friendly."
-                onOpenModal={() => handleOpenModal("Project 4", "Description for Project 4", projectFourSlides)}
+                portfolioImage={project4}
+                portfolioTitle="Business"
+                portfolioDescription=""
+                onOpenModal={() => handleOpenModal("Inclusive travel project", "The website for a travel agency. Source for a disabled people friendly.", projectFourSlides)}
               />
             </SwiperSlide>
 
