@@ -23,7 +23,7 @@ const validationSchema = Yup.object({
   message: Yup.string().required('Required'),
 });
 
-export const ContactForm = () => {
+export const ContactForm = ({ onSubmitSuccess }) => {
 
   const [values, setValues] = useState(initialValues);
 
@@ -54,6 +54,11 @@ export const ContactForm = () => {
       setValues(initialValues); // Сбрасываем значения полей формы в локальном состоянии
       setIsMessageSent(true);
       setIsMessageVisible(true);
+
+      // Call the onSubmitSuccess callback after successful form submission
+      if (isMessageSent) {
+        onSubmitSuccess();
+      }
 
       setTimeout(() => {
         setIsMessageVisible(false);

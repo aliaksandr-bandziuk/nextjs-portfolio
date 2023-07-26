@@ -37,16 +37,18 @@ import project4 from '../../assets/images/projects/project4.png';
 
 export const Portfolio = () => {
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPortfolioModalOpen, setIsPortfolioModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
   const [modalData, setModalData] = useState({ title: '', description: '', slides: [] });
 
   const handleOpenModal = (title, description, slides) => {
-    setIsModalOpen(true);
+    setIsPortfolioModalOpen(true);
     setModalData({ title, description, slides });
   };
 
   const handleCloseModal = () => {
-    setIsModalOpen(false);
+    setIsPortfolioModalOpen(false);
   };
 
   const projectOneSlides = [
@@ -229,7 +231,7 @@ export const Portfolio = () => {
         </div>
       </div>
       <PortfolioModal
-        isOpen={isModalOpen}
+        isOpen={isPortfolioModalOpen}
         onClose={handleCloseModal}
         title={modalData.title}
         description={modalData.description}

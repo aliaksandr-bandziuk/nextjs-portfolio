@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 import Logo from '../../assets/images/logo.png'
 import ButtonSecondary from '../ButtonSecondary/ButtonSecondary'
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary'
+import { ContactModal } from '../ContactModal'
 
 import styles from './TheHeader.module.scss'
 
@@ -16,6 +17,14 @@ const TheHeader = () => {
   const [isNavVisible, setNavVisible] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState('');
+
+  // State for showing/hiding the modal
+  const [isContactModalOpen, setContactModalOpen] = useState(false);
+
+  // Add a function to toggle the modal state
+  const toggleContactModal = () => {
+    setContactModalOpen(!isContactModalOpen);
+  };
 
   const closeMenu = () => {
     setNavVisible(false);
@@ -106,7 +115,7 @@ const TheHeader = () => {
                   onClick={closeMenu}
                 />
               </Link>
-              <ButtonPrimary title="Hire now" />
+              <ButtonPrimary title="Hire now" onClick={toggleContactModal} />
             </div>
           </div>
           <div
@@ -154,6 +163,7 @@ const TheHeader = () => {
           </div>
         </div>
       </div>
+      <ContactModal isOpen={isContactModalOpen} onClose={toggleContactModal} />
     </header>
   )
 }

@@ -7,8 +7,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Image from 'next/image';
+import Skeleton from 'react-loading-skeleton';
+import "react-loading-skeleton/dist/skeleton.css"
 
 export const PortfolioSlider = ({ slides }) => {
+
+  const [loading, setLoading] = React.useState(true);
+
   return (
     <div className={styles.portfolioSlider}>
       <Swiper
