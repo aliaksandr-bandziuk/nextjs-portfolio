@@ -8,7 +8,7 @@ const PortfolioItem = ({ portfolioImage, portfolioTitle, portfolioDescription, o
     <div className={styles.portfolioItem}>
       <div className={styles.portfolioItemWpapper}>
         <div className={styles.portfolioItemImg}>
-          <Image src={portfolioImage} alt="Portfolio Image" />
+          <Image src={portfolioImage} className={styles.img} alt="Portfolio Image" />
         </div>
         <div className={styles.portfolioItemContent}>
           <h3 className={styles.title}>{portfolioTitle}</h3>

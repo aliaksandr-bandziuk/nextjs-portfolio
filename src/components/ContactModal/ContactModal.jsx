@@ -38,20 +38,6 @@ export const ContactModal = ({ isOpen, onClose }) => {
 
   const modalContentRef = useRef(null);
 
-  const handleEscapeKeyPress = (event) => {
-    if (event.key === 'Escape') {
-      onClose();
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('keydown', handleEscapeKeyPress);
-
-    return () => {
-      document.removeEventListener('keydown', handleEscapeKeyPress);
-    };
-  }, [isOpen, onClose]);
-
   return (
     <animated.div className={styles.modalOverlay} style={modalAnimation}>
       <div ref={modalContentRef} className={styles.modalContent}>
