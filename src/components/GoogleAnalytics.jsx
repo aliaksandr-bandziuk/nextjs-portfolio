@@ -2,7 +2,22 @@
 
 import Script from 'next/script'
 
+import { usePathName, useSearchParams } from 'next/navigation'
+import { useEffect } from 'react'
+import { pageview } from '@/app/lib/gtagHelper';
+
 export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
+
+  const pathName = usePathName();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const url = pathName + searchParams.toString();
+
+    pageview(GA_MEASUREMENT_ID, url);
+  }, [pathName, searchParams, GA_MEASUREMENT_ID]);
+
+
   return (
     <>
       <Script strategy="afterInteractive"
