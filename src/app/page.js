@@ -5,8 +5,6 @@ import { Hero } from '@/components/Hero'
 import { Portfolio } from '@/components/Portfolio'
 import { Technologies } from '@/components/Technologies'
 
-import Script from 'next/script'
-
 export default function Home() {
   return (
     <main>
