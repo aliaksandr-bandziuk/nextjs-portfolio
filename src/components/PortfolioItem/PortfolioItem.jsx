@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './PortfolioItem.module.scss';
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const PortfolioItem = ({ portfolioImage, portfolioTitle, portfolioDescription, onOpenModal }) => {
   return (
