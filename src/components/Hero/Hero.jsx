@@ -43,7 +43,17 @@ export const Hero = () => {
             </div>
           </div>
           <div className={styles.heroImage}>
-            <Image className={styles.image} src={HeroImage} alt="Aliaksandr Bandziuk" />
+            <div className={styles.heroImageWrapper}>
+              <Canvas style={{ width: '100%', height: '400px' }}>
+                <OrbitControls enableZoom={false} />
+                <ambientLight intensity={1} />
+                <directionalLight position={[3, 2, 1]} />
+                <Sphere args={[1, 100, 100]} scale={3}>
+                  <MeshDistortMaterial color="#3d1c56" attach="material" distort={0.5} speed={2} />
+                </Sphere>
+              </Canvas>
+              <Image className={styles.image} src={HeroImage} alt="Aliaksandr Bandziuk" />
+            </div>
           </div>
         </div>
         <HeroSlider />

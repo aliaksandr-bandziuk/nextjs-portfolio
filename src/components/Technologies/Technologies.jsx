@@ -9,6 +9,8 @@ import TypeScriptLogo from '../../assets/images/logo-ts.png';
 import JavaScriptLogo from '../../assets/images/logo-js.png';
 import ReduxLogo from '../../assets/images/logo-redux.png';
 import MuiLogo from '../../assets/images/logo-mui.png';
+import GraphQlLogo from '../../assets/images/logo-graphql.png';
+import ThreejsLogo from '../../assets/images/logo-three-js.png';
 
 export const Technologies = () => {
   return (
@@ -68,6 +70,14 @@ export const Technologies = () => {
             <Image
               src={MuiLogo}
               alt="Material UI"
+              width={120}
+              height={120}
+            />
+          </div>
+          <div className={styles.technologieslogosItem}>
+            <Image
+              src={GraphQlLogo}
+              alt="GraphQl"
               width={120}
               height={120}
             />
