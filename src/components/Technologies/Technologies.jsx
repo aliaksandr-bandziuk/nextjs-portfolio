@@ -1,6 +1,9 @@
+'use client'
 import Image from 'next/image';
 import styles from './Technologies.module.scss';
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import ReactLogo from '../../assets/images/logo-react.png';
 import NextLogo from '../../assets/images/logo-next.png';
@@ -13,10 +16,15 @@ import GraphQlLogo from '../../assets/images/logo-graphql.png';
 import ThreejsLogo from '../../assets/images/logo-three-js.png';
 
 export const Technologies = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className={styles.technologies} id="development">
       <div className="container">
-        <div className={styles.technologiesInner}>
+        <div data-aos="fade-up" className={styles.technologiesInner}>
           <h2 className={styles.technologiesTitle}>Technologies</h2>
           <h3 className={styles.technologiesSubtitle}>I am working with</h3>
           <div className={styles.technologiesArrow}>
@@ -25,7 +33,7 @@ export const Technologies = () => {
             </svg>
           </div>
         </div>
-        <div className={styles.technologieslogos}>
+        <div data-aos="fade-up" className={styles.technologieslogos}>
           <div className={styles.technologieslogosItem}>
             <Image
               src={ReactLogo}

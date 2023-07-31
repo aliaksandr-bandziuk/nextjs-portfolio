@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, MeshDistortMaterial, Sphere } from '@react-three/drei'
+import { motion } from 'framer-motion';
 
 import styles from './Hero.module.scss';
 
@@ -29,7 +30,17 @@ export const Hero = () => {
         <div className={styles.heroWrapper}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>Frontend Developer</h1>
-            <h2 className={styles.heroSubtitle}>Alex Bandziuk</h2>
+            <motion.h2
+              className={styles.heroSubtitle}
+              animate={{ x: [50, 150, 50], opacity: 1, scale: 1.2 }}
+              transition={{
+                duration: 2,
+                delay: 0.1,
+                ease: [0.5, 0.71, 1, 1.5],
+              }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileHover={{ scale: 0.8 }}
+            >Alex Bandziuk</motion.h2>
             <p className={styles.heroDescription}>
               I create websites and applications for your business and entertainment. Use modern technologies to make the resource fast and adapted to any device.
             </p>

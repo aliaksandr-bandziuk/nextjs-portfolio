@@ -1,11 +1,14 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 import styles from './ContactForm.module.scss';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const initialValues = {
   name: '',
@@ -24,6 +27,10 @@ const validationSchema = Yup.object({
 });
 
 export const ContactForm = ({ onSubmitSuccess }) => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const [values, setValues] = useState(initialValues);
 
@@ -97,7 +104,11 @@ export const ContactForm = ({ onSubmitSuccess }) => {
     <div>
       <Formik initialValues={initialValues} validationSchema={validationSchema} validateOnBlur onSubmit={onSubmit}>
         <Form className={styles.form}>
-          <div className={styles.inputData}>
+          <div
+            className={styles.inputData}
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <Field
               className={styles.input}
               type="text"
@@ -116,7 +127,11 @@ export const ContactForm = ({ onSubmitSuccess }) => {
           </div>
 
           <div className={styles.inputWrapper}>
-            <div className={styles.inputData}>
+            <div
+              className={styles.inputData}
+              data-aos="fade-left"
+              data-aos-duration="1200"
+            >
               <Field
                 className={styles.input}
                 type="text"
@@ -134,7 +149,11 @@ export const ContactForm = ({ onSubmitSuccess }) => {
               <ErrorMessage name="phone" component="div" className={styles.errorMessage} />
             </div>
 
-            <div className={styles.inputData}>
+            <div
+              className={styles.inputData}
+              data-aos="fade-left"
+              data-aos-duration="1400"
+            >
               <Field
                 className={styles.input}
                 type="email"
@@ -153,7 +172,11 @@ export const ContactForm = ({ onSubmitSuccess }) => {
             </div>
           </div>
 
-          <div className={styles.inputData}>
+          <div
+            className={styles.inputData}
+            data-aos="fade-left"
+            data-aos-duration="1800"
+          >
             <Field
               className={styles.input}
               type="text"
@@ -171,7 +194,11 @@ export const ContactForm = ({ onSubmitSuccess }) => {
             <ErrorMessage name="subject" component="div" className={styles.errorMessage} />
           </div>
 
-          <div className={`${styles.inputData} ${styles.textarea}`}>
+          <div
+            className={`${styles.inputData} ${styles.textarea}`}
+            data-aos="fade-left"
+            data-aos-duration="2000"
+          >
             <Field
               as="textarea"
               id="message"

@@ -1,12 +1,19 @@
+'use client'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 import styles from './ButtonPrimary.module.scss'
 
 const ButtonPrimary = ({ title, onClick }) => {
   return (
-    <button className={styles.button} onClick={onClick}>
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ type: "spring", stiffness: 100, damping: 10 }}
+      className={styles.button}
+      onClick={onClick}>
       {title}
-    </button>
+    </motion.button>
   )
 }
 

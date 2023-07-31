@@ -56,3 +56,9 @@
   gap: 50px;
   padding: 0 50px;
 }
+
+.technologieslogosWrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: fit-content; // Это позволяет блоку иметь ширину, равную сумме ширин элементов внутри
+}

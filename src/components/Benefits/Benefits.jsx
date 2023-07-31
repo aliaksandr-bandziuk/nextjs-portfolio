@@ -1,9 +1,11 @@
+'use client'
 import { BenefitsSlider } from '../BenefitsSlider'
 import { Introduction } from '../Introduction'
 import styles from './Benefits.module.scss'
 import React from 'react'
 
 export const Benefits = () => {
+
   return (
     <section className={styles.benefits}>
       <div className="container">

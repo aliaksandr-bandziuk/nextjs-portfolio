@@ -1,15 +1,23 @@
 'use client'
 import styles from './BenefitsSlider.module.scss'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Benefit } from '../Benefit';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 export const BenefitsSlider = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className={styles.benefitsList}>
+    <div data-aos="fade-up" className={styles.benefitsList}>
       <Swiper
         modules={[Navigation, A11y]}
         breakpoints={{

@@ -1,12 +1,20 @@
-import React from 'react';
+'use client'
+import React, { useEffect } from 'react';
 import styles from './About.module.scss';
 import Image from 'next/image';
 
 import AboutImage from '../../assets/images/about.jpg';
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 import Link from 'next/link';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const About = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className={styles.about} id="about">
       <svg
@@ -71,10 +79,10 @@ export const About = () => {
       </svg>
       <div className="container">
         <div className={styles.aboutWrapper}>
-          <div className={styles.aboutImage}>
+          <div data-aos="fade-right" className={styles.aboutImage}>
             <Image className={styles.img} src={AboutImage} alt="About me" />
           </div>
-          <div className={styles.aboutContent}>
+          <div data-aos="fade-left" className={styles.aboutContent}>
             <h2 className={styles.aboutTitle}>About me</h2>
             <p className={styles.aboutDescription}>
               I&apos;m Alex, frontend software engineer and freelance web developer. I specialize in crafting captivating Landing Pages, Blogs, and Online stores that take businesses to soaring heights. I&apos;m also expert in digital marketing and SEO.
