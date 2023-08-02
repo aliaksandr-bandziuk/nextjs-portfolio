@@ -10,17 +10,14 @@ import Script from 'next/script'
 export default function Home() {
   return (
     <>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-MY8KLK2YZY" />
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3712JXEP8" />
       <Script id='google-analytics'>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
-          gtag('consent', 'default', {
-            'ad_storage': 'denied',
-            'analytics_storage': 'denied',
-          });
           gtag('js', new Date());
-          gtag('config', 'G-MY8KLK2YZY');
+
+          gtag('config', 'G-Z3712JXEP8');
         `}
       </Script>
       <main>
