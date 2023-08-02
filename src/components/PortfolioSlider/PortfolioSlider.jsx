@@ -31,6 +31,7 @@ export const PortfolioSlider = ({ slides }) => {
                 className={styles.img}
                 src={slide.src}
                 alt={slide.alt}
+                loading='lazy'
               />
             ) : (
               <p>Image not found</p>
