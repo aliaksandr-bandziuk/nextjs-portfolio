@@ -10,8 +10,8 @@ import Script from 'next/script'
 export default function Home() {
   return (
     <>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-MY8KLK2YZY" />
-      <Script id='google-analytics' strategy="afterInteractive">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-MY8KLK2YZY" />
+      <Script id='google-analytics'>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
