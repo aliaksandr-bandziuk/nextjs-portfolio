@@ -20,9 +20,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-MY8KLK2YZY" />
-      </head>
       <body className={montserrat.className}>
         <TheHeader />
         {children}
