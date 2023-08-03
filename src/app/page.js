@@ -11,7 +11,6 @@ export default function Home() {
   return (
     <>
       <Script
-        strategy='lazyOnload'
         src="https://www.googletagmanager.com/gtag/js?id=G-3S7ZLYWVWK"
       />
       <Script id='google-analytics'>
