@@ -106,7 +106,7 @@ export const ContactForm = ({ onSubmitSuccess }) => {
         <Form className={styles.form}>
           <div
             className={styles.inputData}
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-duration="1000"
           >
             <Field
@@ -129,7 +129,7 @@ export const ContactForm = ({ onSubmitSuccess }) => {
           <div className={styles.inputWrapper}>
             <div
               className={styles.inputData}
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-duration="1200"
             >
               <Field
@@ -151,7 +151,7 @@ export const ContactForm = ({ onSubmitSuccess }) => {
 
             <div
               className={styles.inputData}
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-duration="1400"
             >
               <Field
@@ -174,7 +174,7 @@ export const ContactForm = ({ onSubmitSuccess }) => {
 
           <div
             className={styles.inputData}
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-duration="1800"
           >
             <Field
@@ -196,7 +196,7 @@ export const ContactForm = ({ onSubmitSuccess }) => {
 
           <div
             className={`${styles.inputData} ${styles.textarea}`}
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-duration="2000"
           >
             <Field

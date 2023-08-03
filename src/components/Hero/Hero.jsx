@@ -1,13 +1,11 @@
 'use client'
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, MeshDistortMaterial, Sphere } from '@react-three/drei'
+import { motion } from 'framer-motion';
 
 import styles from './Hero.module.scss';
-
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 import HeroImage from '../../assets/images/hero.png';
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
@@ -15,11 +13,6 @@ import { HeroSlider } from '../HeroSlider';
 import Link from 'next/link';
 
 export const Hero = () => {
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
     <section className={styles.hero} id="home">
       <svg className={styles.decorationLine} xmlns="http://www.w3.org/2000/svg" width="243" height="565" viewBox="0 0 243 565" fill="none">
@@ -37,7 +30,17 @@ export const Hero = () => {
         <div className={styles.heroWrapper}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>Frontend Developer</h1>
-            <h2 data-aos="fade-left" data-aos-duration="1000" className={styles.heroSubtitle}>Alex Bandziuk</h2>
+            <motion.h2
+              className={styles.heroSubtitle}
+              animate={{ opacity: 1, scale: 1.2 }}
+              transition={{
+                duration: 2,
+                delay: 0.1,
+                ease: [0.5, 0.71, 1, 1.5],
+              }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileHover={{ scale: 0.8 }}
+            >Alex Bandziuk</motion.h2>
             <p className={styles.heroDescription}>
               I create websites and applications for your business and entertainment. Use modern technologies to make the resource fast and adapted to any device.
             </p>

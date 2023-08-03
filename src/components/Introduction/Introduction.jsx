@@ -15,7 +15,7 @@ export const Introduction = ({ introductionTitle, introductionSubtitle, introduc
     <section className={styles.introduction}>
       <div className="container">
         <div className={styles.introductionWrapper}>
-          <div data-aos="fade-right" className={styles.introductionTitle}>
+          <div data-aos="fade-down" className={styles.introductionTitle}>
             <h2 className={styles.title}>{introductionTitle}</h2>
             <div className={styles.decoration}>
               <h3 className={styles.subtitle}>{introductionSubtitle}</h3>
@@ -24,7 +24,7 @@ export const Introduction = ({ introductionTitle, introductionSubtitle, introduc
               </svg>
             </div>
           </div>
-          <div data-aos="fade-left" className={styles.introductionText}>
+          <div data-aos="fade-up" className={styles.introductionText}>
             <p className={styles.introductionDescription}>{introductionDescription}</p>
           </div>
         </div>
