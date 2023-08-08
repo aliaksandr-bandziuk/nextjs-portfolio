@@ -2,7 +2,7 @@
 import styles from './Portfolio.module.scss'
 
 import React, { useState } from 'react'
-import { Navigation, A11y } from 'swiper/modules';
+import { Navigation, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -167,7 +167,7 @@ export const Portfolio = () => {
         <div className={styles.heroSlider}>
           <Swiper
             // install Swiper modules
-            modules={[Navigation, A11y]}
+            modules={[Navigation, A11y, Autoplay]}
             spaceBetween={50}
             breakpoints={{
               320: {
@@ -187,6 +187,11 @@ export const Portfolio = () => {
               nextEl: '.buttonNext',
               prevEl: '.buttonPrev',
             }}
+            autoplay={{ // Добавьте параметры autoplay
+              delay: 2500, // Задержка между слайдами в миллисекундах
+              disableOnInteraction: false, // Автовоспроизведение не останавливается при взаимодействии пользователя
+            }}
+            loop={true} // Включите бесконечную прокрутку
           >
             <SwiperSlide>
               <PortfolioItem
