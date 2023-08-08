@@ -14,6 +14,10 @@ import PortfolioItem from '../PortfolioItem/PortfolioItem';
 import PortfolioModal from '../PortfolioModal/PortfolioModal';
 import { Introduction } from '../Introduction';
 
+import portfolio1 from '../../assets/images/projects/1-portfolio.jpg';
+import portfolio2 from '../../assets/images/projects/2-portfolio.jpg';
+import portfolio3 from '../../assets/images/projects/3-portfolio.jpg';
+import portfolio4 from '../../assets/images/projects/4-portfolio.jpg';
 import project11 from '../../assets/images/projects/project-1-1.jpg';
 import project12 from '../../assets/images/projects/project-1-2.jpg';
 import project13 from '../../assets/images/projects/project-1-3.jpg';
@@ -186,7 +190,7 @@ export const Portfolio = () => {
           >
             <SwiperSlide>
               <PortfolioItem
-                portfolioImage={project1}
+                portfolioImage={portfolio1}
                 portfolioTitle="Business"
                 portfolioDescription=""
                 onOpenModal={() => handleOpenModal("Dental project website", "The Landing Page for a dental clinic. It has a modern design and is fully responsive.", projectOneSlides)}
@@ -194,7 +198,7 @@ export const Portfolio = () => {
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
-                portfolioImage={project2}
+                portfolioImage={portfolio2}
                 portfolioTitle="Social"
                 portfolioDescription=""
                 onOpenModal={() => handleOpenModal("Foundation blog", "The Blog for a social foundation. Created with WordPress. Used custom theme and plugins.", projectTwoSlides)}
@@ -202,7 +206,7 @@ export const Portfolio = () => {
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
-                portfolioImage={project3}
+                portfolioImage={portfolio3}
                 portfolioTitle="NGO"
                 portfolioDescription=""
                 onOpenModal={() => handleOpenModal("NGO Recource Center", "The Website for a NGO. Created with Next.js and WordPress as headless CMS.", projectThreeSlides)}
@@ -210,7 +214,7 @@ export const Portfolio = () => {
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioItem
-                portfolioImage={project4}
+                portfolioImage={portfolio4}
                 portfolioTitle="Business"
                 portfolioDescription=""
                 onOpenModal={() => handleOpenModal("Inclusive travel project", "The website for a travel agency. Source for a disabled people friendly.", projectFourSlides)}
