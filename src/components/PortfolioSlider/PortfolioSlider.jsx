@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './PortfolioSlider.module.scss';
 import { Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,10 +10,14 @@ import Image from 'next/image';
 
 export const PortfolioSlider = ({ slides }) => {
 
-  const [loading, setLoading] = React.useState(true);
+  const [loading, setLoading] = useState(Array(slides.length).fill(true)); // Создаем массив состояний для каждого слайда
 
-  const handleImageLoad = () => {
-    setLoading(false); // Устанавливаем состояние loading в false после загрузки изображения
+  const handleImageLoad = (index) => {
+    setLoading((prevLoading) => {
+      const newLoading = [...prevLoading];
+      newLoading[index] = false;
+      return newLoading;
+    });
   };
 
   return (
@@ -30,13 +34,13 @@ export const PortfolioSlider = ({ slides }) => {
           <SwiperSlide key={index}>
             {slide.src ? (
               <div className={styles.imgContainer}>
-                {loading && <div className={styles.loader}>Loading...</div>}
+                {loading[index] && <span class={styles.loader}></span>}
                 <Image
                   className={`${styles.img} ${loading ? styles.hidden : ''}`}
                   src={slide.src}
                   alt={slide.alt}
                   loading='lazy'
-                  onLoad={handleImageLoad}
+                  onLoad={() => handleImageLoad(index)}
                 />
               </div>
             ) : (
