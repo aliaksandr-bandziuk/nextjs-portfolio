@@ -55,25 +55,10 @@
   flex-wrap: wrap;
   gap: 50px;
   padding: 0 50px;
-  overflow: hidden; // Prevent horizontal overflow
-  margin: 0 -50px; // Counteract the padding
 }
 
 .technologieslogosWrapper {
   display: flex;
   transition: transform 0.3s ease;
   width: fit-content; // Это позволяет блоку иметь ширину, равную сумме ширин элементов внутри
-}
-
-.technologieslogosItem {
-  flex: 0 0 auto; // Prevent stretching the slides
-  margin: 0 20px;
-}
-
-.slideContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px; // Set a fixed width for each slide
-  height: 120px;
 }
