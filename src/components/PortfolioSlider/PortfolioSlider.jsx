@@ -7,12 +7,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Image from 'next/image';
-import Skeleton from 'react-loading-skeleton';
-import "react-loading-skeleton/dist/skeleton.css"
 
 export const PortfolioSlider = ({ slides }) => {
 
   const [loading, setLoading] = React.useState(true);
+
+  const handleImageLoad = () => {
+    setLoading(false); // Устанавливаем состояние loading в false после загрузки изображения
+  };
 
   return (
     <div className={styles.portfolioSlider}>
@@ -27,12 +29,16 @@ export const PortfolioSlider = ({ slides }) => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             {slide.src ? (
-              <Image
-                className={styles.img}
-                src={slide.src}
-                alt={slide.alt}
-                loading='lazy'
-              />
+              <div className={styles.imgContainer}>
+                {loading && <div className={styles.loader}>Loading...</div>}
+                <Image
+                  className={`${styles.img} ${loading ? styles.hidden : ''}`}
+                  src={slide.src}
+                  alt={slide.alt}
+                  loading='lazy'
+                  onLoad={handleImageLoad}
+                />
+              </div>
             ) : (
               <p>Image not found</p>
             )}
