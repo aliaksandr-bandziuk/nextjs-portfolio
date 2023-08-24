@@ -4,6 +4,7 @@ import styles from './Technologies.module.scss';
 import React, { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Slider from 'react-infinite-logo-slider'
 
 import ReactLogo from '../../assets/images/logo-react.png';
 import NextLogo from '../../assets/images/logo-next.png';
@@ -33,7 +34,86 @@ export const Technologies = () => {
             </svg>
           </div>
         </div>
-        <div data-aos="fade-up" className={styles.technologieslogos}>
+        <Slider
+          width="200px"
+          duration={20}
+          pauseOnHover={true}
+          blurBorders={false}
+          blurBoderColor={'#fff'}
+          className={styles.technologieslogos}
+        >
+          <Slider.Slide>
+            <div className={styles.technologieslogosItem}>
+              <Image
+                src={ReactLogo}
+                alt="React"
+                width={120}
+                height={120}
+              />
+            </div>
+          </Slider.Slide>
+          <Slider.Slide>
+            <div className={styles.technologieslogosItem}>
+              <Image
+                src={NextLogo}
+                alt="Next.js"
+                width={120}
+                height={120}
+              />
+            </div>
+          </Slider.Slide>
+          <Slider.Slide>
+            <div className={styles.technologieslogosItem}>
+              <Image
+                src={WpLogo}
+                alt="WordPress"
+                width={120}
+                height={120}
+              />
+            </div>
+          </Slider.Slide>
+          <Slider.Slide>
+            <div className={styles.technologieslogosItem}>
+              <Image
+                src={TypeScriptLogo}
+                alt="TypeScript"
+                width={120}
+                height={120}
+              />
+            </div>
+          </Slider.Slide>
+          <Slider.Slide>
+            <div className={styles.technologieslogosItem}>
+              <Image
+                src={ReduxLogo}
+                alt="Redux"
+                width={120}
+                height={120}
+              />
+            </div>
+          </Slider.Slide>
+          <Slider.Slide>
+            <div className={styles.technologieslogosItem}>
+              <Image
+                src={MuiLogo}
+                alt="Material UI"
+                width={120}
+                height={120}
+              />
+            </div>
+          </Slider.Slide>
+          <Slider.Slide>
+            <div className={styles.technologieslogosItem}>
+              <Image
+                src={GraphQlLogo}
+                alt="GraphQl"
+                width={120}
+                height={120}
+              />
+            </div>
+          </Slider.Slide>
+        </Slider>
+        {/* <div data-aos="fade-up" className={styles.technologieslogos}>
           <div className={styles.technologieslogosItem}>
             <Image
               src={ReactLogo}
@@ -90,7 +170,7 @@ export const Technologies = () => {
               height={120}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
