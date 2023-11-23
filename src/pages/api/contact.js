@@ -20,7 +20,7 @@ export default async function handler(req, res) {
       // Опции для отправки письма
       const mailOptions = {
         from: email,
-        user: process.env.EMAIL_USER,
+        to: process.env.EMAIL_USER,
         subject: `New message from ${name} - ${subject}`,
         text: `${message}\n\nContact Details:\nName: ${name}\nPhone: ${phone}\nEmail: ${email}`,
       };
