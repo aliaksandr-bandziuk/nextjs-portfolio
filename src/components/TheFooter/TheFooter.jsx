@@ -93,7 +93,7 @@ const TheFooter = () => {
           </defs>
         </svg>
         <div className={styles.footerBottom}>
-          2023 © Frontend developer Alex Bandziuk - ALL RIGHTS RESERVED
+          {new Date().getFullYear()} © Frontend developer Alex Bandziuk - ALL RIGHTS RESERVED
         </div>
       </div>
     </footer>
